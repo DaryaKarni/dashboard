@@ -42,9 +42,9 @@
         <div class="header">
           <h1 class="table-title">Projects</h1>
           <div class="buttons">
-            <button id="button-add-project">+ Add Project</button>
-            <button id="button-seed-data">Seed Data</button>
-            <button id="button-add-employee" hidden>+ Add Employee</button>
+            <button id="button-add-project" class="green-button">+ Add Project</button>
+            <button id="button-seed-data" class="green-button">Seed Data</button>
+            <button id="button-add-employee" class="green-button hidden">+ Add Employee</button>
           </div>
         </div>
         <table id="table">
@@ -75,6 +75,6 @@
   const projects = data.monthlyData["2026-0"].projects;
   const employees = data.monthlyData["2026-0"].employees;
   generateTable(projects, "projects");
-  generateTable(employees, "employees");
+  // generateTable(employees, "employees");
 </script>
 </html>
