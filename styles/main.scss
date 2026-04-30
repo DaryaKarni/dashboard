@@ -1,0 +1,93 @@
+$dark-color: #2c3e50;
+$light-dark: #34495e;
+$bright-color: #ecf0f1;
+$hover-color:#425a73;
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: $bright-color;
+}
+body{
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $bright-color;
+  height: 100vh;
+}
+
+main{
+  display: flex;
+  height: 100vh;
+  .collapsible-sidebar{
+    width: 200px;
+    background-color: $dark-color;
+    color: $bright-color;
+    display: flex;
+    flex-direction: column;
+    #burger{
+      all: unset;
+      cursor: pointer;
+      background-color: $light-dark;
+      color: $bright-color;
+      padding: 15px;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      text-align: center;
+      font-size: 1em;
+      border: 0;
+      transition: background-color 0.3s ease;
+      &:hover{
+        background-color: $hover-color;
+      }
+    }
+    .selector{
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      width: 100%;
+      border-bottom: 1px solid $light-dark;
+      h3{
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      #month-select,
+      #year-select{
+        background-color: $light-dark;
+        color: $bright-color;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 0;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        &:hover{
+          background-color: $hover-color;
+        }
+      }
+    }
+    .nav{
+      display: flex;
+      flex-direction: column;
+      *{
+        padding: 15px 20px;
+        text-align: left;
+        transition: background-color 0.3s ease;
+        &:hover{
+          background-color: $light-dark;
+        }
+      }
+    }
+  }
+  .main-content{
+    .header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

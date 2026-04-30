@@ -1,0 +1,200 @@
+{
+  "monthlyData": {
+    "2026-0": {
+      "employees": [
+        {
+          "name": "John",
+          "surname": "Smith",
+          "age": "29",
+          "position": "Junior",
+          "salary": "3750",
+          "estimated-payment": "5625.00",
+          "project": "1.5/1.5",
+          "projected-income": "-197.37"
+        },
+        {
+          "name": "Sarah",
+          "surname": "Johnson",
+          "age": "32",
+          "position": "Middle",
+          "salary": "5400",
+          "estimated-payment": "5400.00",
+          "project": "1.0/1.5",
+          "projected-income": "-1781.58"
+        },
+        {
+          "name": "Michael",
+          "surname": "Williams",
+          "age": "35",
+          "position": "Senior",
+          "salary": "7100",
+          "estimated-payment": "7100.00",
+          "project": "1.0/1.5",
+          "projected-income": "-3646.05"
+        },
+        {
+          "name": "Emily",
+          "surname": "Brown",
+          "age": "29",
+          "position": "Middle",
+          "salary": "5150",
+          "estimated-payment": "5150.00",
+          "project": "1.0/1.5",
+          "projected-income": "2342.50"
+        },
+        {
+          "name": "David",
+          "surname": "Jones",
+          "age": "41",
+          "position": "Lead",
+          "salary": "7900",
+          "estimated-payment": "7900.00",
+          "project": "1.0/1.5",
+          "projected-income": "425.00"
+        },
+        {
+          "name": "Jessica",
+          "surname": "Garcia",
+          "age": "28",
+          "position": "Junior",
+          "salary": "4000",
+          "estimated-payment": "2000.00",
+          "project": "0.5/1.5",
+          "projected-income": "125.00"
+        },
+        {
+          "name": "Robert",
+          "surname": "Martinez",
+          "age": "39",
+          "position": "Senior",
+          "salary": "7350",
+          "estimated-payment": "7350.00",
+          "project": "1.0/1.5",
+          "projected-income": "-2350.00"
+        },
+        {
+          "name": "Lisa",
+          "surname": "Anderson",
+          "age": "31",
+          "position": "Middle",
+          "salary": "5600",
+          "estimated-payment": "5600.00",
+          "project": "1.0/1.5",
+          "projected-income": "-850.00"
+        },
+        {
+          "name": "James",
+          "surname": "Taylor",
+          "age": "45",
+          "position": "Architect",
+          "salary": "9150",
+          "estimated-payment": "9150.00",
+          "project": "1.0/1.5",
+          "projected-income": "-1609.09"
+        },
+        {
+          "name": "Maria",
+          "surname": "Thomas",
+          "age": "26",
+          "position": "Junior",
+          "salary": "3850",
+          "estimated-payment": "1925.00",
+          "project": "0.5/1.5",
+          "projected-income": "75.00"
+        },
+        {
+          "name": "Daniel",
+          "surname": "Moore",
+          "age": "34",
+          "position": "Middle",
+          "salary": "5850",
+          "estimated-payment": "5850.00",
+          "project": "1.0/1.5",
+          "projected-income": "-850.00"
+        },
+        {
+          "name": "Jennifer",
+          "surname": "Jackson",
+          "age": "36",
+          "position": "Senior",
+          "salary": "7500",
+          "estimated-payment": "3750.00",
+          "project": "0.5/1.5",
+          "projected-income": "-1250.00"
+        },
+        {
+          "name": "Christopher",
+          "surname": "White",
+          "age": "31",
+          "position": "Middle",
+          "salary": "5350",
+          "estimated-payment": "2675.00",
+          "project": "-",
+          "projected-income": "-2675.00"
+        },
+        {
+          "name": "Amanda",
+          "surname": "Harris",
+          "age": "28",
+          "position": "Junior",
+          "salary": "3900",
+          "estimated-payment": "1950.00",
+          "project": "-",
+          "projected-income": "-1950.00"
+        },
+        {
+          "name": "Matthew",
+          "surname": "Martin",
+          "age": "42",
+          "position": "Lead",
+          "salary": "8150",
+          "estimated-payment": "4075.00",
+          "project": "-",
+          "projected-income": "-4075.00"
+        }
+      ],
+      "projects": [
+        {
+          "company-name": "TechCorp",
+          "project-name": "E-Commerce Platform",
+          "budget": "12500",
+          "employee-capacity": "3",
+          "employees": "3",
+          "estimated-income": "-3958.33"
+        },
+        {
+          "company-name": "TechCorp",
+          "project-name": "Mobile Banking App",
+          "budget": "16650",
+          "employee-capacity": "2",
+          "employees": "2",
+          "estimated-income": "2767.50"
+        },
+        {
+          "company-name": "MediCare Solutions",
+          "project-name": "Healthcare Portal",
+          "budget": "15000",
+          "employee-capacity": "3",
+          "employees": "4",
+          "estimated-income": "-4325.00"
+        },
+        {
+          "company-name": "DataViz Inc",
+          "project-name": "Analytics Dashboard",
+          "budget": "7900",
+          "employee-capacity": "1",
+          "employees": "1",
+          "estimated-income": "-1250.00"
+        },
+        {
+          "company-name": "SalesPro",
+          "project-name": "CRM System",
+          "budget": "10000",
+          "employee-capacity": "2",
+          "employees": "2",
+          "estimated-income": "-775.00"
+        }
+      ]
+    }
+  }
+}

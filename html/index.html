@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../styles/main.css" rel="stylesheet"></link>
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <div class="collapsible-sidebar">
+      <button id="burger">☰</button>
+      <div class="selector">
+        <h3>Period</h3>
+        <select id="month-select">
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option selected>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+        <select id="year-select">
+          <option>2025</option>
+          <option selected>2026</option>
+          <option>2027</option>
+        </select>
+      </div>
+      <nav class="nav">
+        <a href="#" id="nav-projects">Projects</a>
+        <a href="#" id="nav-employees">Employees</a>
+      </nav>
+    </div>
+    <div class="main-content">
+       <!--делаю это -->
+        <div class="header">
+          <h1 class="table-title">Projects</h1>
+          <div class="buttons">
+            <button id="button-add-project">+ Add Project</button>
+            <button id="button-seed-data">Seed Data</button>
+            <button id="button-add-employee" hidden>+ Add Employee</button>
+          </div>
+        </div>
+        <table id="table">
+        </table>
+        <div class="total">
+          <strong>Total Estimated Income:</strong>
+          <span>$-16240.83</span>
+          <span>(Bench payments: $8700.00)</span>
+        </div>
+      </div>
+      <div class="main-employess"></div>
+    </div>
+
+    <div class="side-in-project"></div>
+    <div class="module-employees"></div>
+
+    <div class="side-in-employees"></div>
+    <div class="module-employees"></div>
+
+  </main>
+  <footer>
+
+  </footer>
+</body>
+<script type="module">
+  import data from "../data/data.json" with {type: "json"}
+  import {generateTable} from "../jscode/generateTable.js"
+  const projects = data.monthlyData["2026-0"].projects;
+  const employees = data.monthlyData["2026-0"].employees;
+  generateTable(projects, "projects");
+  generateTable(employees, "employees");
+</script>
+</html>
