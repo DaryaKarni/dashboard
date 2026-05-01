@@ -13,30 +13,31 @@
       <div class="selector">
         <h3>Period</h3>
         <select id="month-select">
-          <option>January</option>
-          <option>February</option>
-          <option>March</option>
-          <option selected>April</option>
-          <option>May</option>
-          <option>June</option>
-          <option>July</option>
-          <option>August</option>
-          <option>September</option>
-          <option>October</option>
-          <option>November</option>
-          <option>December</option>
+          <option value="0">January</option>
+          <option value="1">February</option>
+          <option value="2">March</option>
+          <option value="3" selected>April</option>
+          <option value="4">May</option>
+          <option value="5">June</option>
+          <option value="6">July</option>
+          <option value="7">August</option>
+          <option value="8">September</option>
+          <option value="9">October</option>
+          <option value="10">November</option>
+          <option value="11">December</option>
         </select>
         <select id="year-select">
-          <option>2025</option>
-          <option selected>2026</option>
-          <option>2027</option>
+          <option value="2025">2025</option>
+          <option value="2026" selected>2026</option>
+          <option value="2027">2027</option>
         </select>
       </div>
       <nav class="nav">
-        <a href="#" id="nav-projects">Projects</a>
-        <a href="#" id="nav-employees">Employees</a>
+        <a href="#" id="nav-projects" data-type="projects">Projects</a>
+        <a href="#" id="nav-employees" data-type="employees" selected>Employees</a>
       </nav>
     </div>
+    <div id="button-back" class="burger-back hidden">→</div>
     <div class="main-content">
        <!--делаю это -->
         <div class="header">
@@ -69,12 +70,6 @@
 
   </footer>
 </body>
-<script type="module">
-  import data from "../data/data.json" with {type: "json"}
-  import {generateTable} from "../jscode/generateTable.js"
-  const projects = data.monthlyData["2026-0"].projects;
-  const employees = data.monthlyData["2026-0"].employees;
-  generateTable(projects, "projects");
-  // generateTable(employees, "employees");
+<script type="module" src="../jscode/sidebar.js">
 </script>
 </html>

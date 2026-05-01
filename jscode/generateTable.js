@@ -2,7 +2,7 @@ export function generateTable(arr, arrType){
   const table = document.querySelector("#table");//try const
   table.innerHTML = "";
   const trHeaders = document.createElement("tr");
-  let headers;
+  let headers = [];
   let thead = document.createElement("thead");
   let tbody = document.createElement("tbody");
   if(arrType === "projects"){
@@ -19,6 +19,7 @@ export function generateTable(arr, arrType){
   })
   thead.appendChild(trHeaders)
   table.appendChild(thead);
+  
   for(let obj of arr){
     let tr = document.createElement("tr");
     for(let key in obj){

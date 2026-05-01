@@ -2,6 +2,7 @@ $dark-color: #2c3e50;
 $light-dark: #34495e;
 $bright-color: #ecf0f1;
 $hover-color:#425a73;
+$sky-blue: rgb(52, 152, 219);
 
 *{
   margin: 0;
@@ -17,18 +18,28 @@ button{
 body{
   font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   background-color: $bright-color;
-  height: 100vh;
+  height: 100%;
 }
-
+.hidden{
+  display: none;
+}
+.hidden-left{
+  margin-left: -250px;
+}
 main{
   display: flex;
   height: 100vh;
+  overflow: hidden;
+  flex-grow: 1;
   .collapsible-sidebar{
+    position: relative;
     width: 250px;
     background-color: $dark-color;
     color: $bright-color;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    transition: all 0.5s ease;
     #burger{
       cursor: pointer;
       background-color: $light-dark;
@@ -85,9 +96,24 @@ main{
       }
     }
   }
+  .burger-back{
+    cursor: pointer;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: 30px;
+    width: 50px;
+    background-color: $sky-blue;
+    border-radius: 5px;
+    color: $bright-color;
+    font-size: 20px;
+    text-align: center;
+  }
   .main-content{
+    flex-grow: 1;
     width: 100%;
     padding: 40px;
+    overflow-y: auto;
     .header{
       display: flex;
       justify-content: space-between;
@@ -102,6 +128,10 @@ main{
           background-color: rgb(40, 167, 69);
           color: $bright-color;
           border-radius: 5px;
+          transition: all 0.3s ease;
+          &:hover{
+            background-color: rgb(23, 98, 41);
+          }
         }
         .hidden{
           display: none;
