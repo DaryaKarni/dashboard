@@ -34,11 +34,15 @@
         addProject.classList.add('hidden');
         seedData.classList.add('hidden');
         addEmployee.classList.remove('hidden');
+        navProjects.classList.remove("nav-selected");
+        navEmployees.classList.add("nav-selected");
       } else{
         total.classList.remove('hidden');
         addProject.classList.remove('hidden');
         seedData.classList.remove('hidden');
         addEmployee.classList.add('hidden');
+        navProjects.classList.add("nav-selected");
+        navEmployees.classList.remove("nav-selected");
       }
 
     }

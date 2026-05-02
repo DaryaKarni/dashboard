@@ -158,7 +158,7 @@
           "company-name": "TechCorp",
           "project-name": "E-Commerce Platform",
           "budget": "12500",
-          "employee-capacity": "3",
+          "employee-capacity": "2.5/3",
           "employees": "3",
           "estimated-income": "-3958.33"
         },
@@ -166,7 +166,7 @@
           "company-name": "TechCorp",
           "project-name": "Mobile Banking App",
           "budget": "16650",
-          "employee-capacity": "2",
+          "employee-capacity": "1.9/2",
           "employees": "2",
           "estimated-income": "2767.50"
         },
@@ -174,7 +174,7 @@
           "company-name": "MediCare Solutions",
           "project-name": "Healthcare Portal",
           "budget": "15000",
-          "employee-capacity": "3",
+          "employee-capacity": "2.9/3",
           "employees": "4",
           "estimated-income": "-4325.00"
         },
@@ -182,7 +182,7 @@
           "company-name": "DataViz Inc",
           "project-name": "Analytics Dashboard",
           "budget": "7900",
-          "employee-capacity": "1",
+          "employee-capacity": "1.0/1",
           "employees": "1",
           "estimated-income": "-1250.00"
         },
@@ -190,23 +190,65 @@
           "company-name": "SalesPro",
           "project-name": "CRM System",
           "budget": "10000",
-          "employee-capacity": "2",
-          "employees": "2",
+          "employee-capacity": "1.5/2",
+          "employees": [
+            {
+              "employee": "Michael Williams",
+              "capacity": "0.60",
+              "fit": "0.90",
+              "vacation": "2 days",
+              "effective": "0.489",
+              "revenue": "2035.71",
+              "cost": "4260.00",
+              "profit": "-2224.29"
+            },
+            {
+              "employee": "Sarah Johnson",
+              "capacity": "1.50",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "1.500",
+              "revenue": "6250.00",
+              "cost": "8100.00",
+              "profit": "-1850.00"
+            }
+          ],
           "estimated-income": "-775.00"
         }
       ]
     },
-    "2026-1": {
+    "2026-3": {
       "employees": [
         {
-          "name": "Mary",
+          "name": "John",
           "surname": "Smith",
           "age": "29",
           "position": "Junior",
           "salary": "3750",
           "estimated-payment": "5625.00",
-          "project": "1.5/1.5",
-          "projected-income": "-197.37"
+          "project": [
+            {
+              "project-name": "E-Commerce Platform",
+              "capacity": "1.00",
+              "fit": "0.95",
+              "vacation": "-",
+              "effective": "0.950",
+              "revenue": "3958.33",
+              "cost": "3750.00",
+              "profit": "208.33"
+            },
+            {
+              "project-name": "CRM System",
+              "capacity": "0.50",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "0.500",
+              "revenue": "2500.00",
+              "cost": "1875.00",
+              "profit": "625.00"
+            }
+          ],
+          "projected-income": "833.33"
         },
         {
           "name": "Sarah",
@@ -215,8 +257,19 @@
           "position": "Middle",
           "salary": "5400",
           "estimated-payment": "5400.00",
-          "project": "1.0/1.5",
-          "projected-income": "-1781.58"
+          "project": [
+            {
+              "project-name": "Mobile Banking App",
+              "capacity": "1.00",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "1.000",
+              "revenue": "4162.50",
+              "cost": "5400.00",
+              "profit": "-1237.50"
+            }
+          ],
+          "projected-income": "-1237.50"
         },
         {
           "name": "Michael",
@@ -225,8 +278,19 @@
           "position": "Senior",
           "salary": "7100",
           "estimated-payment": "7100.00",
-          "project": "1.0/1.5",
-          "projected-income": "-3646.05"
+          "project": [
+            {
+              "project-name": "CRM System",
+              "capacity": "0.60",
+              "fit": "0.90",
+              "vacation": "2 days",
+              "effective": "0.489",
+              "revenue": "2035.71",
+              "cost": "4260.00",
+              "profit": "-2224.29"
+            }
+          ],
+          "projected-income": "-2224.29"
         },
         {
           "name": "Emily",
@@ -235,18 +299,40 @@
           "position": "Middle",
           "salary": "5150",
           "estimated-payment": "5150.00",
-          "project": "1.0/1.5",
-          "projected-income": "2342.50"
+          "project": [
+            {
+              "project-name": "Healthcare Portal",
+              "capacity": "1.00",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "1.000",
+              "revenue": "5000.00",
+              "cost": "5150.00",
+              "profit": "-150.00"
+            }
+          ],
+          "projected-income": "-150.00"
         },
-        {
+          {
           "name": "David",
           "surname": "Jones",
           "age": "41",
           "position": "Lead",
           "salary": "7900",
           "estimated-payment": "7900.00",
-          "project": "1.0/1.5",
-          "projected-income": "425.00"
+          "project": [
+            {
+              "project-name": "Healthcare Portal",
+              "capacity": "1.00",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "1.000",
+              "revenue": "5000.00",
+              "cost": "7900.00",
+              "profit": "-2900.00"
+            }
+          ],
+          "projected-income": "-2900.00"
         },
         {
           "name": "Jessica",
@@ -255,8 +341,19 @@
           "position": "Junior",
           "salary": "4000",
           "estimated-payment": "2000.00",
-          "project": "0.5/1.5",
-          "projected-income": "125.00"
+          "project": [
+            {
+              "project-name": "Mobile Banking App",
+              "capacity": "0.50",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "0.500",
+              "revenue": "2081.25",
+              "cost": "2000.00",
+              "profit": "81.25"
+            }
+          ],
+          "projected-income": "81.25"
         },
         {
           "name": "Robert",
@@ -265,8 +362,19 @@
           "position": "Senior",
           "salary": "7350",
           "estimated-payment": "7350.00",
-          "project": "1.0/1.5",
-          "projected-income": "-2350.00"
+          "project": [
+            {
+              "project-name": "Analytics Dashboard",
+              "capacity": "1.00",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "1.000",
+              "revenue": "7900.00",
+              "cost": "7350.00",
+              "profit": "550.00"
+            }
+          ],
+          "projected-income": "550.00"
         },
         {
           "name": "Lisa",
@@ -275,8 +383,19 @@
           "position": "Middle",
           "salary": "5600",
           "estimated-payment": "5600.00",
-          "project": "1.0/1.5",
-          "projected-income": "-850.00"
+          "project": [
+            {
+              "project-name": "E-Commerce Platform",
+              "capacity": "1.00",
+              "fit": "0.90",
+              "vacation": "-",
+              "effective": "0.900",
+              "revenue": "3750.00",
+              "cost": "5600.00",
+              "profit": "-1850.00"
+            }
+          ],
+          "projected-income": "-1850.00"
         },
         {
           "name": "James",
@@ -285,8 +404,19 @@
           "position": "Architect",
           "salary": "9150",
           "estimated-payment": "9150.00",
-          "project": "1.0/1.5",
-          "projected-income": "-1609.09"
+          "project": [
+            {
+              "project-name": "Healthcare Portal",
+              "capacity": "1.00",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "1.000",
+              "revenue": "5000.00",
+              "cost": "9150.00",
+              "profit": "-4150.00"
+            }
+          ],
+          "projected-income": "-4150.00"
         },
         {
           "name": "Maria",
@@ -295,8 +425,19 @@
           "position": "Junior",
           "salary": "3850",
           "estimated-payment": "1925.00",
-          "project": "0.5/1.5",
-          "projected-income": "75.00"
+          "project": [
+            {
+              "project-name": "Mobile Banking App",
+              "capacity": "0.50",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "0.500",
+              "revenue": "2081.25",
+              "cost": "1925.00",
+              "profit": "156.25"
+            }
+          ],
+          "projected-income": "156.25"
         },
         {
           "name": "Daniel",
@@ -305,8 +446,19 @@
           "position": "Middle",
           "salary": "5850",
           "estimated-payment": "5850.00",
-          "project": "1.0/1.5",
-          "projected-income": "-850.00"
+          "project": [
+            {
+              "project-name": "Analytics Dashboard",
+              "capacity": "1.00",
+              "fit": "0.85",
+              "vacation": "-",
+              "effective": "0.850",
+              "revenue": "6715.00",
+              "cost": "5850.00",
+              "profit": "865.00"
+            }
+          ],
+          "projected-income": "865.00"
         },
         {
           "name": "Jennifer",
@@ -315,8 +467,19 @@
           "position": "Senior",
           "salary": "7500",
           "estimated-payment": "3750.00",
-          "project": "0.5/1.5",
-          "projected-income": "-1250.00"
+          "project": [
+            {
+              "project-name": "E-Commerce Platform",
+              "capacity": "0.50",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "0.500",
+              "revenue": "2083.33",
+              "cost": "3750.00",
+              "profit": "-1666.67"
+            }
+          ],
+          "projected-income": "-1666.67"
         },
         {
           "name": "Christopher",
@@ -325,7 +488,7 @@
           "position": "Middle",
           "salary": "5350",
           "estimated-payment": "2675.00",
-          "project": "-",
+          "project": [],
           "projected-income": "-2675.00"
         },
         {
@@ -335,7 +498,7 @@
           "position": "Junior",
           "salary": "3900",
           "estimated-payment": "1950.00",
-          "project": "-",
+          "project": [],
           "projected-income": "-1950.00"
         },
         {
@@ -345,7 +508,7 @@
           "position": "Lead",
           "salary": "8150",
           "estimated-payment": "4075.00",
-          "project": "-",
+          "project": [],
           "projected-income": "-4075.00"
         }
       ],
@@ -354,7 +517,7 @@
           "company-name": "TechCorp",
           "project-name": "E-Commerce Platform",
           "budget": "12500",
-          "employee-capacity": "3",
+          "employee-capacity": "2.8/3",
           "employees": "3",
           "estimated-income": "-3958.33"
         },
@@ -362,7 +525,7 @@
           "company-name": "TechCorp",
           "project-name": "Mobile Banking App",
           "budget": "16650",
-          "employee-capacity": "2",
+          "employee-capacity": "1.5/2",
           "employees": "2",
           "estimated-income": "2767.50"
         },
@@ -370,7 +533,7 @@
           "company-name": "MediCare Solutions",
           "project-name": "Healthcare Portal",
           "budget": "15000",
-          "employee-capacity": "3",
+          "employee-capacity": "2.2/3",
           "employees": "4",
           "estimated-income": "-4325.00"
         },
@@ -378,7 +541,7 @@
           "company-name": "DataViz Inc",
           "project-name": "Analytics Dashboard",
           "budget": "7900",
-          "employee-capacity": "1",
+          "employee-capacity": "0.5/1",
           "employees": "1",
           "estimated-income": "-1250.00"
         },
@@ -386,8 +549,29 @@
           "company-name": "SalesPro",
           "project-name": "CRM System",
           "budget": "10000",
-          "employee-capacity": "2",
-          "employees": "2",
+          "employee-capacity": "1.2/2",
+          "employees": [
+            {
+              "employee": "Michael Williams",
+              "capacity": "0.60",
+              "fit": "0.90",
+              "vacation": "2 days",
+              "effective": "0.489",
+              "revenue": "2035.71",
+              "cost": "4260.00",
+              "profit": "-2224.29"
+            },
+            {
+              "employee": "Sarah Johnson",
+              "capacity": "1.50",
+              "fit": "1.00",
+              "vacation": "-",
+              "effective": "1.500",
+              "revenue": "6250.00",
+              "cost": "8100.00",
+              "profit": "-1850.00"
+            }
+          ],
           "estimated-income": "-775.00"
         }
       ]

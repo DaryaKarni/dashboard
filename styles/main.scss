@@ -1,7 +1,7 @@
 $dark-color: #2c3e50;
 $light-dark: #34495e;
 $bright-color: #ecf0f1;
-$hover-color:#425a73;
+$hover-color:rgb(66, 90, 115);
 $sky-blue: rgb(52, 152, 219);
 
 *{
@@ -19,12 +19,75 @@ body{
   font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   background-color: $bright-color;
   height: 100%;
+  font-size: 12px;
 }
 .hidden{
   display: none;
 }
 .hidden-left{
   margin-left: -250px;
+}
+.blue-button{
+  cursor: pointer;
+  background-color: $sky-blue;
+  color: $bright-color;
+  padding: 3px 10px 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  &:hover{
+    background-color: rgb(6, 94, 152);
+  }
+}
+th{
+  transition: all 0.3s ease;
+  &:hover{
+    background-color: $hover-color;
+  }
+}
+.th-container{
+  display: flex;
+  gap: 10px;
+}
+.th-buttons{
+  color: rgb(142, 164, 189);
+  transition: all 0.3s ease;
+  &:hover{
+    color: $bright-color;
+  }
+}
+.td-buttons{
+  display: flex;
+  gap: 5px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.purple-button{
+  cursor: pointer;
+  background-color: rgba(133, 0, 133, 0.567);
+  color: $bright-color;
+  padding: 3px 10px 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  &:hover{
+    background-color: rgba(104, 19, 104, 0.873);
+  }
+}
+.red-button{
+  cursor: pointer;
+  background-color: rgba(235, 71, 46, 0.818);
+  color: $bright-color;
+  padding: 3px 10px 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  &:hover{
+    background-color: rgb(188, 46, 30);
+  }
 }
 main{
   display: flex;
@@ -94,6 +157,10 @@ main{
           background-color: $light-dark;
         }
       }
+      .nav-selected{
+          background-color: $light-dark;
+          border-left: 2px solid $sky-blue;
+        }
     }
   }
   .burger-back{

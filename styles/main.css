@@ -16,6 +16,7 @@ body {
   font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ecf0f1;
   height: 100%;
+  font-size: 12px;
 }
 
 .hidden {
@@ -24,6 +25,75 @@ body {
 
 .hidden-left {
   margin-left: -250px;
+}
+
+.blue-button {
+  cursor: pointer;
+  background-color: rgb(52, 152, 219);
+  color: #ecf0f1;
+  padding: 3px 10px 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+.blue-button:hover {
+  background-color: rgb(6, 94, 152);
+}
+
+th {
+  transition: all 0.3s ease;
+}
+th:hover {
+  background-color: rgb(66, 90, 115);
+}
+
+.th-container {
+  display: flex;
+  gap: 10px;
+}
+
+.th-buttons {
+  color: rgb(142, 164, 189);
+  transition: all 0.3s ease;
+}
+.th-buttons:hover {
+  color: #ecf0f1;
+}
+
+.td-buttons {
+  display: flex;
+  gap: 5px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.purple-button {
+  cursor: pointer;
+  background-color: rgba(133, 0, 133, 0.567);
+  color: #ecf0f1;
+  padding: 3px 10px 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.purple-button:hover {
+  background-color: rgba(104, 19, 104, 0.873);
+}
+
+.red-button {
+  cursor: pointer;
+  background-color: rgba(235, 71, 46, 0.818);
+  color: #ecf0f1;
+  padding: 3px 10px 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.red-button:hover {
+  background-color: rgb(188, 46, 30);
 }
 
 main {
@@ -58,7 +128,7 @@ main .collapsible-sidebar #burger {
   transition: background-color 0.3s ease;
 }
 main .collapsible-sidebar #burger:hover {
-  background-color: #425a73;
+  background-color: rgb(66, 90, 115);
 }
 main .collapsible-sidebar .selector {
   display: flex;
@@ -84,7 +154,7 @@ main .collapsible-sidebar .selector #year-select {
 }
 main .collapsible-sidebar .selector #month-select:hover,
 main .collapsible-sidebar .selector #year-select:hover {
-  background-color: #425a73;
+  background-color: rgb(66, 90, 115);
 }
 main .collapsible-sidebar .nav {
   display: flex;
@@ -97,6 +167,10 @@ main .collapsible-sidebar .nav * {
 }
 main .collapsible-sidebar .nav *:hover {
   background-color: #34495e;
+}
+main .collapsible-sidebar .nav .nav-selected {
+  background-color: #34495e;
+  border-left: 2px solid rgb(52, 152, 219);
 }
 main .burger-back {
   cursor: pointer;
