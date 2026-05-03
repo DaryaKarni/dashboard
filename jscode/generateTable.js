@@ -1,100 +1,121 @@
-export function generateTable(arr, arrType){
-  const table = document.querySelector("#table");//try const
+import { handleSort, handleFind, handleDel, handleShow } from "./table.js";
+
+export function generateTable(arr, arrType, selector = "#table") {
+  const table = document.querySelector(selector);
   table.innerHTML = "";
+
+  const thead = document.createElement("thead");
+  const tbody = document.createElement("tbody");
   const trHeaders = document.createElement("tr");
+
+  const arrSort = ["Company Name", "Project Name", "Budget", "Employee Capacity", "Estimated Income", "Name", "Surname", "Age", "Position", "Salary", "Estimated Payment", "Project", "Projected Incomes"];
+  const arrFind = ["Company Name", "Project Name", "Name", "Surname", "Position", "Project"];
+
   let headers = [];
-  const arrSort = ["Company Name", "Project Name", "Budget",
-     "Employee Capacity", "Estimated Income", "Name",
-     "Surname", "Age", "Position", "Salary",
-     "Estimated Payment", "Project", "Projected Incomes"];
-  const arrFind = ["Company Name", "Project Name", "Name",
-    "Surname", "Position", "Project"];
-  let thead = document.createElement("thead");
-  let tbody = document.createElement("tbody");
-  if(arrType === "projects"){
-    headers = ["Company Name", "Project Name", "Budget", "Employee Capacity",
-               "Employees", "Estimated Income", "Actions"];
-  } else if(arrType === "employees"){
-    headers = ["Name", "Surname", "Age", "Position", "Salary", "Estimated Payment",
-               "Project", "Projected Incomes", "Actions"];
+  let keys = [];
+
+  if (arrType === "projects") {
+    headers = ["Company Name", "Project Name", "Budget", "Employee Capacity", "Employees", "Estimated Income", "Actions"];
+    keys = ["company-name", "project-name", "budget", "employee-capacity", "employees", "estimated-income"];
+  } else if (arrType === "employees") {
+    headers = ["Name", "Surname", "Age", "Position", "Salary", "Estimated Payment", "Project", "Projected Incomes", "Actions"];
+    keys = ["name", "surname", "age", "position", "salary", "estimated-payment", "project", "projected-income"];
+  } else if (arrType === "showEmployees" || arrType === "showAssignments") {
+    headers = [arrType === "showEmployees" ? "Employee" : "Project", "Capacity", "Fit", "Vacation", "Effective", "Revenue", "Cost", "Profit", "Actions"];
+    keys = [arrType === "showEmployees" ? "employee" : "project", "capacity", "fit", "vacation", "effective", "revenue", "cost", "profit"];
   }
-  headers.forEach((header) => {
+
+  headers.forEach((header, index) => {
     const th = document.createElement("th");
     const container = document.createElement("div");
-    container.classList.add("th-container");
+    container.className = "th-container";
     container.textContent = header;
-    if(arrSort.some(value => value === header)){
-      const sortButton = document.createElement("button");
-      sortButton.textContent = "⇅";
-      sortButton.classList.add("th-buttons");
-      container.appendChild(sortButton);
+
+    if (arrSort.includes(header)) {
+      const btn = document.createElement("button");
+      btn.textContent = "⇅";
+      btn.className = "th-buttons";
+      btn.onclick = () => handleSort(th, index);
+      container.appendChild(btn);
     }
-    if(arrFind.some(value => value === header)){
-      const findButton = document.createElement("button");
-      findButton.textContent = "⌕";
-      findButton.classList.add("th-buttons");
-      container.appendChild(findButton);
+    if (arrFind.includes(header)) {
+      const btn = document.createElement("button");
+      btn.textContent = "⌕";
+      btn.className = "th-buttons";
+      btn.onclick = handleFind;
+      container.appendChild(btn);
     }
     th.appendChild(container);
     trHeaders.appendChild(th);
-  })
-  thead.appendChild(trHeaders)
+  });
+
+  thead.appendChild(trHeaders);
   table.appendChild(thead);
 
-  for(let obj of arr){
-    let tr = document.createElement("tr");
-    for(let key in obj){
-      let td = document.createElement("td");
-      td.classList.add(key);
-      if(key === "employees"){
-        const button = document.createElement("button");
-        button.classList.add("blue-button");
-        button.id = "showEmployees";
-        const employeesCount = obj[key].length;
-        button.textContent = `Show Employees (${employeesCount})`;
-        td.appendChild(button);
-      } else if(key === "project"){
-        const button = document.createElement("button");
-        button.classList.add("blue-button");
-        button.id = "showAssignments";
-        const projectCount = obj[key].length;
-        if(projectCount){
-          button.textContent = `Show Assignments (${projectCount})`;//добавить capacity
-          td.appendChild(button);
-        } else{
+  arr.forEach(obj => {
+    const tr = document.createElement("tr");
+
+    keys.forEach(key => {
+      const td = document.createElement("td");
+      td.className = key;
+      const value = obj[key];
+
+      if (key === "employees" || key === "project") {
+        if (Array.isArray(value) && value.length > 0) {
+          const btn = document.createElement("button");
+          btn.className = "blue-button";
+          btn.textContent = `${key === "employees" ? 'Show Employees' : 'Show Assignments'} (${value.length})`;
+
+          btn._subData = value;
+          btn._subType = key === "employees" ? "showEmployees" : "showAssignments";
+          btn._subTitle = `${key === "employees" ? 'Employees' : 'Assignments'}`;
+
+          btn.onclick = (e) => handleShow(e, generateTable);
+          td.appendChild(btn);
+        } else {
           td.textContent = "-";
         }
-      } else{
-        if(key === "estimated-income" || key === "projected-income"
-          || key === "profit"){
-          let value = +obj[key];
-          value >= 0 ? td.style.color = "green" :
-           td.style.color = "red";
-           td.textContent = `$${obj[key]}`;
-        } else {
-          td.textContent = obj[key];
-        }
+      } else if (["estimated-income", "projected-income", "salary", "budget", "estimated-payment", "profit", "revenue", "cost"].includes(key)) {
+        const num = parseFloat(value) || 0;
+        td.style.color = num >= 0 ? "green" : "red";
+        td.textContent = `$${value}`;
+      } else {
+        td.textContent = value || "-";
       }
       tr.appendChild(td);
+    });
+
+    const actionTd = document.createElement("td");
+    actionTd.className = "td-buttons";
+
+    if (arrType === "showEmployees" || arrType === "showAssignments") {
+      const editBtn = document.createElement("button");
+      editBtn.className = "blue-button";
+      editBtn.textContent = "Edit";
+      const unBtn = document.createElement("button");
+      unBtn.className = "red-button";
+      unBtn.textContent = arrType === "showEmployees" ? "Remove" : "Unassign";
+      actionTd.append(editBtn, unBtn);
+    } else {
+      if (arrType === "employees") {
+        const avBtn = document.createElement("button");
+        avBtn.className = "purple-button";
+        avBtn.textContent = "Availability";
+        const asBtn = document.createElement("button");
+        asBtn.className = "blue-button";
+        asBtn.textContent = "Assign";
+        actionTd.append(avBtn, asBtn);
+      }
+      const delBtn = document.createElement("button");
+      delBtn.className = "red-button";
+      delBtn.textContent = "Delete";
+      delBtn.onclick = () => handleDel(tr);
+      actionTd.appendChild(delBtn);
     }
-    const delButton = document.createElement("button");
-    delButton.textContent = "Delete";
-    delButton.classList.add("red-button");
-    const td = document.createElement("td");
-    td.classList.add("td-buttons");
-    if(arrType === "employees"){
-      const availButton = document.createElement("button");
-      const assignButton = document.createElement("button");
-      availButton.classList.add("purple-button");
-      assignButton.classList.add("blue-button");
-      availButton.textContent = "Availability";
-      assignButton.textContent = "Assign" ;
-      td.appendChild(availButton);
-      td.appendChild(assignButton);
-    }
-    td.appendChild(delButton);
-    tr.appendChild(td);
+
+    tr.appendChild(actionTd);
     tbody.appendChild(tr);
-  }
+  });
+
   table.appendChild(tbody);
 }
