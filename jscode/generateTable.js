@@ -22,7 +22,7 @@ export function generateTable(arr, arrType, selector = "#table") {
     keys = ["name", "surname", "age", "position", "salary", "estimated-payment", "project", "projected-income"];
   } else if (arrType === "showEmployees" || arrType === "showAssignments") {
     headers = [arrType === "showEmployees" ? "Employee" : "Project", "Capacity", "Fit", "Vacation", "Effective", "Revenue", "Cost", "Profit", "Actions"];
-    keys = [arrType === "showEmployees" ? "employee" : "project", "capacity", "fit", "vacation", "effective", "revenue", "cost", "profit"];
+    keys = [arrType === "showEmployees" ? "employee" : "project-name", "capacity", "fit", "vacation", "effective", "revenue", "cost", "profit"];
   }
 
   headers.forEach((header, index) => {
